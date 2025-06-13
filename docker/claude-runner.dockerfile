@@ -1,11 +1,12 @@
 FROM ubuntu:24.04
 
-# Install system dependencies
+# Install system dependencies including unzip for bun installation
 RUN apt-get update && apt-get install -y \
     curl \
     git \
     python3 \
     python3-pip \
+    unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js 20 LTS
