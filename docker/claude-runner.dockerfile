@@ -13,6 +13,9 @@ RUN apt-get update && apt-get install -y \
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt-get install -y nodejs
 
+# Configure git to trust GitHub Actions workspace directories
+RUN git config --global --add safe.directory '/__w/*'
+
 # Set up working directory
 WORKDIR /workspace
 
