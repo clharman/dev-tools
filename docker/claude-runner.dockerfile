@@ -43,7 +43,7 @@ ENV PLAYWRIGHT_BROWSERS_PATH=/opt/playwright-browsers
 ENV PATH="/usr/local/bin:/usr/bin:/bin:$PATH"
 
 # Create comprehensive health check
-COPY .github/scripts/playwright-health-check.sh /usr/local/bin/playwright-health-check
+COPY scripts/playwright-health-check.sh /usr/local/bin/playwright-health-check
 RUN chmod +x /usr/local/bin/playwright-health-check
 
 # Run final verification
